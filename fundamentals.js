@@ -17,7 +17,7 @@
 // console.log('undefined === null'); //false these are not considered exactly equal
 // console.log('" \t \n" - 2"'); string is considered and empty string and therefore can be converted to number 0
 
-//Section2 
+/*//Section2 
 
 let three = "3"
 let four = "4"
@@ -33,3 +33,6 @@ let subtraction = three - four
 
 let lessThan1 = three < four // true correct  if doing numerically
 let lessThan2 = thirty < four// false if doing numerically, needs to be converted from stringsto nuumbers
+*/
+
+if(0) console.log('#1 zero is true')
