@@ -35,4 +35,14 @@ let lessThan1 = three < four // true correct  if doing numerically
 let lessThan2 = thirty < four// false if doing numerically, needs to be converted from stringsto nuumbers
 */
 
-if(0) console.log('#1 zero is true')
+/* Q3- Which of the following console.log messages will print? Why?
+if(0) console.log('#1 zero is true') won't print
+if ("0") console.log('#2 zero is true')will print
+if (null) console.log('null is true') won't print
+if (-1) console.log('negative is true')will print
+if (1) console.log('positive is true') will print 
+
+reasons: 0, null, undefined empty String, false and NaN are considered falsy and will not execute  in an if statement. 
+any other value is considered truthy and will execute in the if statements
+*/
+
