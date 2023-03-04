@@ -98,10 +98,10 @@ or
 const getGreeting = (name) => (`Hello ${name} !`)
 console.log(getGreeting('Sheehan'));
 */
-
+/*
 //Q6
 //A and B
-/*
+
 const westley = {
     name: 'Westley',
     numFingers: 5
@@ -113,38 +113,91 @@ const rugen = {
 const inigo = {
     firstName: 'Inigo',
     lastName: 'Montoya',
-    greeting(person) => {
+    greeting(person) {
+
     let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}. `
     console.log(greeting + this.getCatchPhrase(person));
-    }
-},
+    },
    
-    getCatchPhrase(person) => {
+    getCatchPhrase:(person) => {
+
         return person.numFingers === 6 ? "You killed my father, Prepare to Die!" : "Nice to meet you";
     }
-    
-}
 
+}
+    
     inigo.greeting(westley)
     inigo.greeting(rugen)
 */
 
-   /* Q7
+   /*Q7
    const basketballGame = {
     score: 0,
+
     freeThrow() {
     this.score++;
+    return this
     },
-    basket() {
+
+    dunk() {
+    this.score += 4;
+    return this
+    },
+
+    layup() {
     this.score += 2;
+    return this
     },
+
     threePointer() {
     this.score += 3;
+    return this
     },
+
     halfTime() {
-    console.log('Halftime score is '+this.score);
+    console.log('Halftime score is ' + this.score);
+    return this
+    },
+
+    fullTime() {
+    console.log('fulltime score is ' + this.score);
+    return this
     }
     }
+
     //modify each of the above object methods to enable function chaining as below:
-    basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime();
+    basketballGame.freeThrow().freeThrow().dunk().layup().threePointer().halfTime().dunk().fullTime();
     */
+
+    //Q8
+   /* 
+    const sydney = {
+        name: 'Sydney',
+        population: 5_121_000,
+        state: 'NSW',
+        founded: '26 January 1788',
+        timezone: 'Australia/Sydney'  
+    }
+    const auckland = {
+        name: 'Auckland',
+        population: 1_421_000,
+        state: 'AKL',
+        founded: '6 February 1890', //none of this information is claiming to be correct just for practicing
+        timezone: 'NZT'  
+    }
+    
+    function printcity(city) {
+        for (prop in city) {
+           console.log(prop, '=' + city[prop]);
+        }
+   }
+    
+printcity(sydney)
+printcity(auckland)
+*/
+
+let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
+let dog1 = 'Bingo';
+let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+
+
