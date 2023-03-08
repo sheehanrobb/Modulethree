@@ -195,9 +195,37 @@ const inigo = {
 printcity(sydney)
 printcity(auckland)
 */
-
+/* Q9 
 let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
-let dog1 = 'Bingo';
 let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+const moreSports = new Array('Hockey', 'Cricket', 'Volleyball');
+moreSports.push('Football', 'Gymnastics', 'Rockclimbing');
+moreSports.unshift('Netball', 'Snowboarding');
 
 
+console.log(moreSports)
+*/
+/*
+let dog1 = 'Bingo';
+let dog2 = dog1;
+dog2 = 'fido';
+console.log(dog2)
+
+
+
+let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+console.log(cat1)
+let cat2 = Object.assign({},cat1);
+cat2.name = 'Rascal'
+console.log(cat2.name)
+*/
+//e) to change the way 'moreSports and cat2 are created to ensure the original remains independant
+/*
+let moreSports = [...teamSports];//create a new array with the same elements as teamSports
+moreSports.push('Football'); //adds a new sport to the end
+moreSports.unshift('Gymnastics');
+
+let cat2 = {...cat1};//creates a new object with the same properties
+cat2.name = 'Rascal'; // changes the name property
+*/
+//Q10
