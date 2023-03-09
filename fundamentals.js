@@ -3,7 +3,7 @@
 // console.log("" - 1 + 0); -1 as operator performs arithmetic and empty string is converted to 0
 // console.log(true + false);  1 in js true = 1 and false = 0
 // console.log(!true);  false
-// console.log(6 / "3");  2 "3'(string) is converted 3 (number) 
+// console.log(6 / "3");  2 "3'(string) is converted 3 (number)
 // console.log("2" * "3" );// 6 both strings are converted to numbers
 // console.log( 4 + 5 + "px")//"9px" artithmetic then conversion and concatenation with a string
 // console.log("$" + 4 + 5); //"$45" string concatenation
@@ -17,7 +17,7 @@
 // console.log(undefined === null); //false these are not considered exactly equal
 // console.log(" \t \n" - 2");-2 string is considered and empty string and therefore can be converted to number 0
 
-//Section2 
+//Section2
 /*
 let three = "3"
 let four = "4"
@@ -25,7 +25,7 @@ let thirty = "30"
 //what is the value of the following expressions?
 
 let addition = three + four //34 (concatenation)
-console.log(addition) 
+console.log(addition)
 let multiplication = three * four//12
 console.log(multiplication)
 let division = three / four//0.75
@@ -34,8 +34,8 @@ let subtraction = three - four
 console.log(subtraction); -1
 
 let lessThan1 = three < four // True
-console.log(lessThan1) 
-let lessThan2 = thirty < four//Truelexigraphical order so its comparing the 3 in thirty to the 4  
+console.log(lessThan1)
+let lessThan2 = thirty < four//Truelexigraphical order so its comparing the 3 in thirty to the 4
 console.log(lessThan2)
 */
 
@@ -44,9 +44,9 @@ if(0) console.log('#1 zero is true') won't print
 if ("0") console.log('#2 zero is true')will print
 if (null) console.log('null is true') won't print
 if (-1) console.log('negative is true')will print
-if (1) console.log('positive is true') will print 
+if (1) console.log('positive is true') will print
 
-reasons: 0, null, undefined, empty String, false and NaN are considered falsy and will not execute  in an if statement. 
+reasons: 0, null, undefined, empty String, false and NaN are considered falsy and will not execute  in an if statement.
 any other value is considered truthy and will execute in the if statements
 */
 
@@ -67,10 +67,10 @@ result += 'greater than 10';
 
 
 
-/*Q5 
+// Q5
 
-5. Rewrite the following function using: a) function expression syntax, and b) arrow function
-syntax. Test each version to make sure they work the same.
+// 5. Rewrite the following function using: a) function expression syntax, and b) arrow function
+// syntax. Test each version to make sure they work the same.
 
 function getGreeting(name) {
 return 'Hello ' + name + '!';
@@ -97,7 +97,7 @@ or
 
 const getGreeting = (name) => (`Hello ${name} !`)
 console.log(getGreeting('Sheehan'));
-*/
+
 /*
 //Q6
 //A and B
@@ -118,14 +118,14 @@ const inigo = {
     let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}. `
     console.log(greeting + this.getCatchPhrase(person));
     },
-   
+
     getCatchPhrase:(person) => {
 
         return person.numFingers === 6 ? "You killed my father, Prepare to Die!" : "Nice to meet you";
     }
 
 }
-    
+
     inigo.greeting(westley)
     inigo.greeting(rugen)
 */
@@ -170,32 +170,32 @@ const inigo = {
     */
 
     //Q8
-   /* 
+   /*
     const sydney = {
         name: 'Sydney',
         population: 5_121_000,
         state: 'NSW',
         founded: '26 January 1788',
-        timezone: 'Australia/Sydney'  
+        timezone: 'Australia/Sydney'
     }
     const auckland = {
         name: 'Auckland',
         population: 1_421_000,
         state: 'AKL',
         founded: '6 February 1890', //none of this information is claiming to be correct just for practicing
-        timezone: 'NZT'  
+        timezone: 'NZT'
     }
-    
+
     function printcity(city) {
         for (prop in city) {
            console.log(prop, '=' + city[prop]);
         }
    }
-    
+
 printcity(sydney)
 printcity(auckland)
 */
-/* Q9 
+/* Q9
 let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
 let cat1 = { name: 'Fluffy', breed: 'Siberian' };
 const moreSports = new Array('Hockey', 'Cricket', 'Volleyball');
