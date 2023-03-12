@@ -229,3 +229,37 @@ let cat2 = {...cat1};//creates a new object with the same properties
 cat2.name = 'Rascal'; // changes the name property
 */
 //Q10
+/*
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.human = true;
+    this.canDrive = function() {
+        return this.age >= 16
+
+    }
+}
+
+let person1 = new Person("Sheehan", 33)
+let person2 = new Person("Morgann", 35)
+
+console.log(person1.canDrive())
+console.log(person2.canDrive())
+
+class Personclass {
+    constructor(name, age,){
+        this.name = name;
+        this.age = age;
+        this.human = true;
+         
+    }
+    canDrive() {
+        return this.age >= 16
+}
+}
+
+let person3 = new Personclass("Kimberley", 32)
+
+
+console.log(person3.canDrive())
+*/
