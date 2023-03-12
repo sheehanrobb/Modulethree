@@ -29,7 +29,7 @@ console.log(differenceDays, today)
 character of each word changed into a capital letter, as in the example below. Test it with
 different strings.
 */
-
+/*
 function ucFirstLetters(str) {
     const words = str.split(" ")
 
@@ -44,3 +44,24 @@ function ucFirstLetters(str) {
 console.log(ucFirstLetters("los angeles"))
 console.log(ucFirstLetters("New York City"))
 console.log(ucFirstLetters("san francisco"))
+*/
+//Q2
+/* conditional operator/ternary operator
+
+function truncate(str, max) {
+    return str.length > max ? `${str.slice(0, max)}...` : str;
+}
+
+*/
+/* if else statement
+
+  function truncate(str, max){
+    if (str.lrngth > max) {
+        return str.slice(0, max) + '...';
+    }
+    return str
+  }
+
+console.log(truncate('This text will be truncated if it is too long', 25))
+
+//Q3
