@@ -63,5 +63,153 @@ function truncate(str, max) {
   }
 
 console.log(truncate('This text will be truncated if it is too long', 25))
-
+*/
 //Q3
+/*
+let animals = ['Tiger', 'Giraffe'];
+
+animals.push('Zebra', 'Elephant'); // add Zebra and elephant to the end of the array
+
+animals.unshift('Monkey', 'Gorilla');// add Monkey and Gorilla to the beginning of the array
+
+animals.sort(); // sort the array alphabetically
+
+animals = replaceMiddleAnimal('Lion'); // replace the middle animal with Lion
+function replaceMiddleAnimal(newValue) {
+    const middleIndex = Math.floor(animals.length / 2);
+    animals[middleIndex] = newValue;
+    return animals;
+}
+
+function findMatchingAnimals (beginsWith) { // find all animals that start with the given letter
+    return animals.filter(animal => animal.startsWith(beginsWith));
+
+}
+
+console.log('Animals that start with G: ' + findMatchingAnimals('G')); 
+*/
+//Q4
+/*
+function camelCase(cssProp) {
+    const words = cssProp.split('-') // split words into an array ['margin', 'left']
+    for (let i = 0 ; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1); // change each 1st letter of word in the array to uppercase
+        return words.join(" "); // join the array into a string
+
+    }
+    // the split method is used to split the string at each hyphen
+    // the for loop is used to iterate through each word in the resulting array
+    //let i = 0 is the initial value of the counter 
+    //i < words.length is the condition that is checked before each iteration
+    //i++ is the increment value of the counter
+    //words[i] = words[i][0].toUpperCase() + words[i].substr(1) is the code that is executed for each iteration which changes the first letter of each word to uppercase
+    //the join method is used to join the array of words back to a string separated by a space
+
+}
+*/
+/*
+function camelCase(cssProp) {
+    return cssProp ? cssProp.split("-").map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)).join (" ") : "";
+   
+}
+//camelCase function takes a string as a parameter. The conditional operator(?) checks if there is a string. if it is then the split method is ised to split the string at each hyphen. 
+//The map method is used to iteraed trhough each word in the resulting array.
+//The charAt method is used to get the first character of each word and the toUpperCase method is used to change it to uppercase.
+//the slice method is used to concatenate the rest of the word to the first character.
+//the join method is used to join the array of words back to a string separated by a space.
+
+console.log(camelCase('margin-left')) // marginLeft
+console.log(camelCase('background-image')) // backgroundImage
+console.log(camelCase('display')) // display
+*/
+//Q5
+/*
+let twentyCents = 0.20
+let tenCents = 0.10
+console.log(`${twentyCents} + ${tenCents} = ${twentyCents + tenCents}`)
+// 0.2 + 0.1 = 0.30000000000000004
+
+let fixedTwenty = twentyCents.toFixed(2);
+let fixedTen = tenCents.toFixed(2);
+console.log(fixedTwenty + fixedTen)
+//returns 0.200.10 because to fixed returns a string and not a number thus in this example two strings are being concatenated
+
+function currencyAddition (float1, float2) {
+    let sum = float1 + float2;
+    return sum;
+}
+
+console.log(currencyAddition(0.2, 0.1))
+*/
+/*
+function currencyOperation(float1, float2, operation) {
+
+    switch(operation) {
+        case 'add': {
+            return float1 + float2;
+            break;
+        }
+        case 'subtract': {
+            return float1 - float2;
+            break;
+        }
+        case 'multiply': {
+            return float1 * float2;
+            break;
+        }
+        case 'divide': {
+            return float1 / float2;
+        }
+        default: {
+            return 'Invalid operation';
+        }
+    }
+}
+console.log(currencyOperation(6.8,7.9, 'multiply'))
+
+function currencyOperation(float1, float2, operation, numDecimals) {
+    let result;
+
+    switch(operation) {
+        case '+': {
+            result = float1 + float2;
+            break;
+        }
+        case '-': {
+            result = float1 - float2;
+            break;
+        }
+        case '*': {
+            result = float1 * float2;
+            break;
+        }
+        case '/': {
+            result = float1 / float2;
+            break;
+        }
+        default: {
+            return 'Invalid operation';
+            break;
+        }
+    }
+   if (numDecimals && numDecimals <= 10) { // if numDecimals is defined/truthy (ie not null undefined false NaN or empty) and less than or equal to 10 
+    result = result.toPrecision(numDecimals); // toPrecision method returns a string representing the number in fixed-point or exponential notation rounded to precision significant digits
+    return result; // return the result
+   }
+
+    
+}
+console.log(currencyOperation(6.85745765765765765,7.97768687665675, '*',(10)))
+*/
+//Q6
+
+function unique(duplicatesArray) {
+    let duplicatesArray = [];
+    let filteredArray = duplicatesArray.filter(item === duplicatesArray )
+    return filteredArray;
+}
+const colours = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow']
+const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+console.log(unique(colours)) // [ 'red', 'green', 'blue', 'yellow', 'orange' ]
+console.log(unique(testScores)) // [ 55, 84, 97, 63, 32, 91, 43 ]

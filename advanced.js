@@ -132,11 +132,11 @@ function cheeseIsAddedOnPizza(nextfunc) {
     console.log('cheeseIsAddedOnPizza')
     setTimeout(nextfunc(veggiesAreAddedOnPizza, 400))
 }
-function veggiesAreAddedOnPizza() {
+function veggiesAreAddedOnPizza(nextfunc) {
     console.log('veggiesAreAddedOnPizza')
     setTimeout(nextfunc(pizzaIsHeated, 400))
 }
-function pizzaIsHeated() {
+function pizzaIsHeated(nextfunc) {
     console.log('pizzaIsHeated')
 }
 function pizzaIsReady() {
