@@ -203,13 +203,83 @@ function currencyOperation(float1, float2, operation, numDecimals) {
 console.log(currencyOperation(6.85745765765765765,7.97768687665675, '*',(10)))
 */
 //Q6
-
+/*
 function unique(duplicatesArray) {
-    let duplicatesArray = [];
-    let filteredArray = duplicatesArray.filter(item === duplicatesArray )
-    return filteredArray;
+    return [...new Set(duplicatesArray)];
 }
+
+//set object can be used to remove duplicate values from an array
+//the spread operator is used to spread the set object into an array
+
 const colours = ['red', 'green', 'blue', 'yellow', 'orange', 'red', 'blue', 'yellow']
 const testScores = [55, 84, 97, 63, 55, 32, 84, 91, 55, 43]
+const fleetwoodMac = ['Stevie Nicks', 'Lindsey Buckingham', 'Christine McVie', 'John McVie', 'Mick Fleetwood', 'Stevie Nicks', 'Lindsey Buckingham', 'Christine McVie', 'John McVie', 'Mick Fleetwood']
 console.log(unique(colours)) // [ 'red', 'green', 'blue', 'yellow', 'orange' ]
 console.log(unique(testScores)) // [ 55, 84, 97, 63, 32, 91, 43 ]
+console.log(unique(fleetwoodMac)) // [ 'Stevie Nicks', 'Lindsey Buckingham', 'Christine McVie', 'John McVie', 'Mick Fleetwood' ]
+
+*/
+//Q7
+/*
+const books = [
+    { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+    { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
+    { id: 3, title: '1984', author: 'George Orwell', year: 1949 },
+    { id: 4, title: 'Brave New World', author: 'Aldous Huxley', year: 1932 },
+    { id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger', year: 1951 },
+    ];
+//a)
+
+    function getBookTitle (bookId) {
+        const book = books.find(book => book.id === bookId);
+        return book ? book.title : null;
+    }
+
+    console.log(getBookTitle(3)) // 1984
+//b)
+    function getOldBooks (year) {
+        return books.filter(book => book.year < year)
+
+    }
+    console.log(getOldBooks(1950)) // [ { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 }, { id: 3, title: '1984', author: 'George Orwell', year: 1949 }, { id: 4, title: 'Brave New World', author: 'Aldous Huxley', year: 1932 }, { id: 5, title: 'The Catcher in the Rye', author: 'J.D. Salinger', year: 1951 } ]
+//c)using the map method add a new genre property
+
+function addGenre () {
+    const genre = ['classic']
+    return books.map(book => ({...book, genre}))
+
+}
+console.log(addGenre())
+*/
+/*d) (Extension) Write a function getTitles(authorInitial) that uses map and
+filter together to return an array of book titles for books written by authors whose
+names start with authorInitial.
+
+
+function getTitles(authorInitial){
+    return books.filter(book => book.author[0] === authorInitial).map(book => book.title)
+}
+
+console.log(getTitles('J'))
+*/
+/* e) (Extension) Write a function latestBook() that uses find and forEach to get the
+book with the most recent publication date.
+
+
+function latestBook() {
+    let latest = null;
+    books.forEach(function(book) {
+        if (!latest || book.year > latest.year) {
+            latest = book;
+        }   
+    })
+    return latest;
+}   
+
+console.log(latestBook())
+*/
+//q8
+const phoneBookABC = new Map() //an empty map to begin with
+phoneBookABC.set('Annabelle', '0412312343')
+phoneBookABC.set('Barry', '0433221117')
+phoneBookABC.set('Caroline', '0455221182')
