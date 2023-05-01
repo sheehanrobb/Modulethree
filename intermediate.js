@@ -277,9 +277,103 @@ function latestBook() {
 }   
 
 console.log(latestBook())
-*/
+
 //q8
 const phoneBookABC = new Map() //an empty map to begin with
 phoneBookABC.set('Annabelle', '0412312343')
 phoneBookABC.set('Barry', '0433221117')
 phoneBookABC.set('Caroline', '0455221182')
+
+//a) Create a new phoneBookDEF Map to store names beginning with D, E or F
+const phoneBookDEF = new Map()
+phoneBookDEF.set('Daisy', '0211223344')
+phoneBookDEF.set('Ethan', '0222112233')
+phoneBookDEF.set('Frankie', '0222334455')
+console.log(phoneBookABC)
+console.log(phoneBookDEF)
+
+//b)
+//c) update the phone number for caroline
+/*
+phoneBookABC.set('Caroline', '0226677888')
+console.log(phoneBookABC)
+*/
+//d)
+/*
+function printPhonebook(contacts) {
+    contacts.forEach((number, name) => console.log(`${name}: ${number}`))
+    console.log(printPhonebook(contacts)
+   )
+   console.log(printPhonebook(phoneBookABC))
+    console.log(printPhonebook(phoneBookDEF))
+}
+
+//e + f)
+
+const phoneBook = new Map([...phoneBookABC, ...phoneBookDEF])
+function printPhoneBook (contacts) {
+    contacts.forEach((number, name) => console.log(`${name}: ${number}`))
+}
+console.log(printPhoneBook(phoneBook))
+*/
+
+//q9
+let salaries = {
+    "Timothy" : 35000,
+    "David" : 25000,
+    "Mary" : 55000,
+    "Christina" : 75000,
+    "James" : 43000
+    };
+
+//a) Write a function that returns the total salary of all employees.
+/*
+function sumSalaries(salaries) {
+    let sum = 0;
+    for (let salary of Object.values(salaries)) {
+        sum += salary;
+    }
+    return sum;
+}
+console.log(sumSalaries(salaries))
+
+// alternative solution using reduce method
+function sumSalaries(salaries) {
+    return Object.values(salaries).reduce((sum, salary) => sum + salary,0) //0 is the initial value of sum
+
+}
+console.log(sumSalaries(salaries))
+
+
+//b) return the name of the person with the highest salary
+
+
+function topSalary(salaries){
+    let max = 0;
+    let maxName = null;
+    for (const [name, salary] of Object.entries(salaries)) {
+        if (max < salary) {
+            max = salary;
+            maxName = name;
+        }
+    }
+    return maxName;
+}
+console.log(topSalary(salaries))
+
+//q10
+const today = new Date();
+console.log('Current time is ' + today.toLocaleTimeString())
+console.log(today.getHours() + ' hours have passed so far today')
+console.log(today.getMinutes() + ' minutes have passed so far today')
+console.log(today.getSeconds() + ' seconds have passed so far today')
+
+const myAge = new Date(1990, 00, 02)
+console.log(myAge.toLocaleDateString() + ` I am ${today.getFullYear() - myAge.getFullYear()} years old`)
+
+function daysInBetween(date1, date2) {
+    const difference = date2.getTime() - date1.getTime();
+    return Math.round(difference / (1000 * 60 * 60 * 24));//1000 milliseconds in a second, 60 seconds in a minute, 60 minutes in an hour, 24 hours in a day
+}
+console.log(daysInBetween(myAge, today) + ' days have passed since I was born')
+*/
